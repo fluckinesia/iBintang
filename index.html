@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="STAR ASN Link">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="description" content="Pintasan STAR ASN dan laboratorium koordinat tetap untuk pengujian PWA.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <link rel="icon" href="./icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+  <title>STAR ASN — Pintasan & GPS Test</title>
+</head>
+<body>
+  <main class="app" id="app">
+    <header class="header">
+      <div class="mark" aria-hidden="true">✦</div>
+      <div class="heading">
+        <h1>STAR ASN <span>Launcher</span></h1>
+        <p>Pintasan situs resmi &amp; pengujian lokasi PWA</p>
+      </div>
+    </header>
+
+    <section class="intro" aria-label="Halaman utama">
+      <div class="eyebrow">AKSES CEPAT</div>
+      <h2>Masuk ke STAR ASN</h2>
+      <p class="muted">Buka halaman login resmi di Safari. Kredensial tidak dimasukkan ataupun disimpan di PWA ini.</p>
+      <a class="primary" href="https://star-asn.kemenimipas.go.id/authentication/login" target="_blank" rel="noopener noreferrer">
+        Buka halaman login <span aria-hidden="true">↗</span>
+      </a>
+      <div class="domain"><span class="dot"></span> star-asn.kemenimipas.go.id</div>
+    </section>
+
+    <section class="panel" aria-label="GPS simulasi">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">LAB GELOKASI</div>
+          <h2>Titik simulasi</h2>
+        </div>
+        <span class="pill"><span class="pill-dot"></span> Tetap</span>
+      </div>
+      <div class="coords">
+        <div><span class="key">Latitude</span><strong id="lat">-6.2212607</strong></div>
+        <div><span class="key">Longitude</span><strong id="lon">106.8321831</strong></div>
+      </div>
+      <div class="actions">
+        <button id="test" type="button">Uji titik simulasi</button>
+        <button id="copy" type="button" class="secondary">Salin koordinat</button>
+      </div>
+      <output id="result" class="result" aria-live="polite">Koordinat simulasi siap diuji.</output>
+      <p class="explain"><strong>Batasan:</strong> Lokasi ini hanya digunakan oleh fungsi pengujian PWA sendiri. Tidak mengubah GPS iPhone atau lokasi yang dibaca situs STAR ASN.</p>
+    </section>
+
+    <aside class="install" id="install">
+      <span aria-hidden="true">▣</span>
+      <div><strong>Pasang di layar utama iPhone</strong><p>Buka URL PWA ini di Safari → Bagikan → Tambahkan ke Layar Utama.</p></div>
+    </aside>
+    <footer>Alat pengujian independen · Tidak berafiliasi dengan STAR ASN</footer>
+  </main>
+</body>
+</html>
